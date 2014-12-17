@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/MainServlet")
-public class MainServlet extends HttpServlet {
+@WebServlet("/UpdatedServlet")
+public class UpdatedServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String name = "";
 	private String category = "";
@@ -20,52 +20,31 @@ public class MainServlet extends HttpServlet {
 	private String location = "";
 	private String duration = "";
 	private String price = "";
-	
+	private String id = "";
 
-	public MainServlet() {
+	public UpdatedServlet() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
-		out.println("Auction Servis -> Projekt TAS 2014/15 </br></br>");
-		out.println("Looking for new auctions. Found: </br>");
-		Connection conn = AuctionDB.connect();
-	      
-        if(conn == null){
-            out.print("Unable to connect to database ");
-        }
-        
-       // AuctionDB.addAuction(conn, "Czwarta!!");
-        out.print(AuctionDB.getAuction(conn) + "</br>");
-        
-        try{
-            conn.close();
-        }
-        catch(SQLException e){
-            out.print("An error occurred when closing the database connection " + e);
-        }
-        out.println("Connection closed successfully");
-		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Connection conn = AuctionDB.connect();
 		
 		getRequest(request);
 		PrintWriter out = response.getWriter();
-		out.print("List of all auctions: </br>");
-		
-		Connection conn = AuctionDB.connect();
 		
 		if(conn == null){
             out.print("Unable to connect to database ");
         }
-        
-        AuctionDAO auction = new AuctionDAO(name, category, description,location, Integer.parseInt(duration), Float.parseFloat(price));
- 
-        AuctionDB.addAuction(conn, auction);
+		
+		AuctionDAO auctionToUpdate = new AuctionDAO(name, category, description, location, Integer.parseInt(duration), Float.parseFloat(price));
+		AuctionDB.updateAuction(conn, auctionToUpdate, id);
 
         out.print(AuctionDB.getAuction(conn) + "</br>");
+        
+        
         try{
             conn.close();
         }
@@ -73,7 +52,7 @@ public class MainServlet extends HttpServlet {
             out.print("An error occurred when closing the database connection " + e);
         }
         out.println("Connection closed successfully");
-		
+	
 	}
 	
 	private void getRequest(HttpServletRequest request){
@@ -83,5 +62,7 @@ public class MainServlet extends HttpServlet {
 		location = request.getParameter("location");
 		duration = request.getParameter("duration");
 		price = request.getParameter("price");
+		id = request.getParameter("id");
 	}
+	
 }

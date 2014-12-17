@@ -17,5 +17,20 @@
     <servlet-name>Hello</servlet-name>
     <url-pattern>/addAuction</url-pattern>
   </servlet-mapping>
-
+  <servlet>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>projekttas.UpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/updateAuction</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>UpdatedServlet</servlet-name>
+    <servlet-class>projekttas.UpdatedServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdatedServlet</servlet-name>
+    <url-pattern>/updatedAuction</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -8,10 +8,12 @@ public class AuctionDB {
     private final static String PASSWORD = "kubis2014";
     private final static String DRIVER = "com.mysql.jdbc.Driver";
     
-    private final static String query1 = "SELECT * FROM";
-	private final static String insertQueryBegin = "INSERT INTO Auctions VALUES(";
-	private final static String insertQueryEnd = "')";
-   // private final static String query2 = "WHERE id =";
+    private final static String querySelectFrom = "SELECT * FROM ";
+	private final static String queryInsertBegin = "INSERT INTO Auctions VALUES(";
+	private final static String queryInsertEnd = "')";
+	private final static String queryUpdateBegin = "UPDATE Auctions SET ";
+    private final static String queryWhereId = "WHERE id =";
+
     private static Connection connection;
        
     public static ResultSet result;
@@ -45,26 +47,22 @@ public class AuctionDB {
         return stm;
     }
     
-    public static ResultSet executeQuery(Connection conn, String query){
-        try{
-            Statement stm = conn.createStatement();
-            result = stm.executeQuery(query);
-        }
-        catch(SQLException e){
-            System.out.println("An error occurred while executing query " + e);
-        }
-        return result;
-    }
-    
     public static String getAuction(Connection conn){
         String resultString = "";
     	try {
-            Statement stm = conn.createStatement();
-            result = stm.executeQuery(query1 + " Auctions");
-            while(result.next() == true){
+            Statement stm = getStatement(conn);
+            result = stm.executeQuery(querySelectFrom + "Auctions");
+            
+            while(result.next()){
                 String name = result.getString("name");
                 String id = result.getString("id");
-                resultString += name + " " + "id = " + id + "</br>";
+                String category = result.getString("category");
+                String description = result.getString("description");
+                String location = result.getString("location");
+                String duration = result.getString("duration");
+                String price = result.getString("price");
+                resultString += id + ". " + name + " <b>Category:</b> " + category + " <b>Description:</b> "+ description + " <b>Location:</b> " + location + " <b>Duration:</b> "+ 
+                duration +"<b>h Price:</b> " + price + "</br>";
             }
         } 
         catch (SQLException e) {
@@ -72,23 +70,48 @@ public class AuctionDB {
         }
     	return resultString;
     }
+    /*
+    public static void addAuction(Connection conn, String name, String category, String description, String location, String duration, String price){
+
+        String query = "";
+    	String idString = "";
+    	int idInteger;
+    	try{
+            Statement stm = getStatement(conn);
+    		result = stm.executeQuery(querySelectFrom + " Auctions");
+    		
+            while(result.next()){
+    			idString = result.getString("id");
+    		}
+    		
+            idInteger = Integer.parseInt(idString) + 1;
+    		idString = Integer.toString(idInteger);
+    		
+    		query = queryInsertBegin + idString + ", '"+ name + "', '" + category + "', '" + description + "', '" + location + "', '" + duration + "', '" + price + queryInsertEnd;
+    		stm.executeUpdate(query);
+    	}
+    	catch(SQLException e){
+    		throw new RuntimeException(e);
+    	}
+    }*/
     
-    public static void addAuction(Connection conn, String values){
+    public static void addAuction(Connection conn, AuctionDAO auction){
 
     	String query = "";
     	String idString = "";
     	int idInteger;
     	try{
     		Statement stm = conn.createStatement();
-            result = stm.executeQuery(query1 + " Auctions");
+            result = stm.executeQuery(querySelectFrom + "Auctions");
     		
             while(result.next()){
     			idString = result.getString("id");
     		}
     		
-            idInteger = Integer.parseInt(idString)+1;
+            idInteger = Integer.parseInt(idString) + 1;
     		idString = Integer.toString(idInteger);
-    		query = insertQueryBegin + idString + ", '"+ values + insertQueryEnd;
+    		query = queryInsertBegin + idString + ", '"+ auction.name + "', '" + auction.category + "', '" + auction.description + "', '" + auction.location + "', '"
+    		+ auction.duration + "', '" + auction.price + queryInsertEnd;
 
     		stm.executeUpdate(query);
     	}
@@ -97,9 +120,56 @@ public class AuctionDB {
     	}
     }
     
-    public static String getValue(Connection conn, String value){
-    	String resultString = "";
-
-    	return resultString; 
+    public static void updateAuction(Connection conn,  AuctionDAO auction, String id){
+    	Statement stm = getStatement(conn);
+    	String query = queryUpdateBegin+"name='" + auction.name + "', category='" + auction.category + "', description='" + auction.description +
+				"', location='" + auction.location + "', duration='" + auction.duration + "', price='" + auction.price +"' WHERE id=" + id;
+    	try{
+    		stm.executeUpdate(query);
+    	}
+    	catch(SQLException e){
+    		throw new RuntimeException(e);
+    	}
+    }
+    
+    public static AuctionDAO getAuctionToUpdate(Connection conn, String id){
+    	Statement stm = getStatement(conn);
+    	String name = "";
+        String category = "";
+        String description = "";
+        String location = "";
+        String duration = "";
+        String price = "";
+        AuctionDAO auction = null;
+    	
+        try{
+    		result = stm.executeQuery(querySelectFrom + "Auctions " + queryWhereId + id );
+    		while(result.next()){
+                name = result.getString("name");
+                category = result.getString("category");
+                description = result.getString("description");
+                location = result.getString("location");
+                duration = result.getString("duration");
+                price = result.getString("price");
+    		}
+    		auction = new AuctionDAO(name, category, description, location, Integer.parseInt(duration), Float.parseFloat(price));
+    	}
+    	catch(SQLException e){
+    		throw new RuntimeException(e);
+    	}
+    	return auction;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

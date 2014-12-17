@@ -10,6 +10,16 @@
 		<form method="post" action="addAuction">
         Insert Auction name: <br />
         <input type="text" name="name" /><br /> 
+        Insert category: <br />
+        <input type="text" name="category" /><br /> 
+        Insert description: <br />
+        <input type="text" name="description" /><br /> 
+        Insert location: <br />
+        <input type="text" name="location" /><br /> 
+        Insert duration: <br />
+        <input type="text" name="duration" /><br /> 
+        Insert price: <br />
+        <input type="text" name="price" /><br /> 
         <input type="submit" value="Add Auction">
     </form>
 </body>

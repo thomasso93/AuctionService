@@ -27,7 +27,8 @@ public class AddAuctionServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		
 		PrintWriter out = response.getWriter();
-		out.print("Incoming variable name= " + name + "</br>");
+		out.print("Incoming variable name= " + name + "</br></br>");
+		out.print("List of all Auctions");
 		
 		Connection conn = AuctionDB.connect();
 		
@@ -35,7 +36,7 @@ public class AddAuctionServlet extends HttpServlet {
             out.print("Unable to connect to database ");
         }
         
-        AuctionDB.addAuction(conn, name);
+        //AuctionDB.addAuction(conn, name);
         out.print(AuctionDB.getAuction(conn) + "</br>");
         
         try{
