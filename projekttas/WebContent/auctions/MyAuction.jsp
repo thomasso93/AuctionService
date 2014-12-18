@@ -4,14 +4,14 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="css/style.css">
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<nav class="navbar navbar-default" style="margin-bottom:0px;" role="navigation">
+		<nav class="navbar navbar-default" role="navigation">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -21,14 +21,14 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="index.jsp">Seriws Aukcyjny</a>
+		      <a class="navbar-brand" href="..\indeks.jsp">Serwis Aukcyjny</a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="index.jsp">Home</a></li>
-		        <li><a href="auctions/Auction.jsp">Aukcje</a></li>
+		        <li><a href="..\index.jsp">Home</a></li>
+		        <li><a href="Auction.jsp">Aukcje</a></li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategorie <span class="caret"></span></a>
 		          <ul class="dropdown-menu" role="menu">
@@ -175,117 +175,35 @@
 		        <button type="submit" class="btn btn-default">Szukaj</button>
 		      </form>
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="auctions/SingUp.jsp">Rejestracja</a></li>
-		        <li><a href="auctions/LogIn.jsp">Logowanie</a></li>
+		      	<li><a href="AddAuction.jsp">Dodaj aukcje</a></li>
+		        <li class="active"><a href="MyAuction.jsp">Moje aukcje</a></li>
+		        <li><a href="#">Moje konto</a></li>
+		        <li><a href="../index.jsp">Wyloguj</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-
-		    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Do³¹cz do nas.</h1>
-              <p>Tylko zarejestrowani u¿ytkownicy mog¹ korzystaæ w pe³ni z naszego serwisu. Nie czekaj, wiêc i za³ó¿ darmowe konto.</p>
-              <p><a class="btn btn-lg btn-primary" href="auctions/SingUp.jsp" role="button">Sign up today</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Kupuj, sprzedawaj, licytuj.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
 		<div class="container">
-			<!--<div id="a">
-	        <div class="dropdown">
-	            <a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="/page.html">
-	                Lista <span class="caret"></span>
-	            </a>
-	    		<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
-	              <li><a href="#">Akcja 1</a></li>
-	              <li><a href="#">Akcja 2</a></li>
-	              <li class="divider"></li>
-	              <li class="dropdown-submenu">
-	                <a tabindex="-1" href="#">Wiêcej opcji</a>
-	                <ul class="dropdown-menu">
-	                  <li><a tabindex="-1" href="#">2 lvl</a></li>
-	                  <li class="dropdown-submenu">
-	                    <a href="#">Wiêcej</a>
-	                    <ul class="dropdown-menu">
-	                        <li><a href="#">3 lvl</a></li>
-	                    	<li><a href="#">3 lvl</a></li>
-	                    </ul>
-	                  </li>
-	                  <li><a href="#">2 lvl</a></li>
-	                  <li><a href="#">2 lvl</a></li>
-	                </ul>
-	              </li>
-	            </ul>
-	        </div>
-	    </div>-->
-	    <div class="row">
-		    	<div class="col-md-4">
-		    		<h2>O serwisie</h2>
-		    		<p>
-		    			Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-		    		</p>
-		    		<p>
-		    			<a class="btn btn-default" href="#" role="button">View details &raquo;</a>
-		    		</p>
-		    	</div>
-		    	<div class="col-md-4">
-		    		<h2>Dlaczego nasz serwis</h2>
-		    		<p>
-		    			Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-		    		</p>
-		    		<p>
-		    			<a class="btn btn-default" href="#" role="button">View details &raquo;</a>
-		    		</p>
-		    	</div>
-		    	<div class="col-md-4">
-		    		<h2>O nas</h2>
-		    		<p>
-		    			Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-		    		</p>
-		    		<p>
-		    			<a class="btn btn-default" href="#" role="button">View details &raquo;</a>
-		    		</p>
-		    	</div>
+			<div class="text-center">
+				<h2><a href="#">Aukcje obserwowane</a></h2>
+			</div>
+			<div class='row'>
+				<div class='col-md-12'>
+				</div>
+			</div>
+			<div class="text-center">
+				<h2><a href="#">Moje aktywne aukcje</a></h2>
+			</div>
+			<div class='row'>
+				<div class='col-md-12'>
+				</div>
+			</div>
+			<div class="text-center">
+				<h2><a href="#">Moje zakoñczone aukcje</a></h2>
+			</div>
+			<div class='row'>
+				<div class='col-md-12'>
+				</div>
 			</div>
 			<hr>
 			<footer>
