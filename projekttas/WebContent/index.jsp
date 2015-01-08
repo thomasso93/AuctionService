@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@page language="Java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -40,11 +39,11 @@
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
-		            	<a href="#">Nieruchomoœci</a>
+		            	<a href="#">NieruchomoÂœÅ›ci</a>
 		            	<ul class="dropdown-menu">
 		            		<li><a href="#">Mieszkania</a></li>
 		            		<li><a href="#">Domy</a></li>
-		            		<li><a href="#">Dzia³ki</a></li>
+		            		<li><a href="#">DziaÅ‚ki</a></li>
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
@@ -60,7 +59,7 @@
 		            		<li><a href="#">Komputery</a></li>
 		            		<li><a href="#">Telewizory</a></li>
 		            		<li><a href="#">Konsole</a></li>
-		            		<li><a href="#">Sprzêt DVD/Blu-ray</a></li>
+		            		<li><a href="#">SprzÃªt DVD/Blu-ray</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Fotografia</a>
 		            			<ul class="dropdown-menu">
@@ -68,7 +67,7 @@
 		            				<li><a href="#">Kamery</a></li>
 		            			</ul>
 		            		</li>
-		            		<li><a href="#">Sprzêt audio</a></li>
+		            		<li><a href="#">SprzÄ™t audio</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Gry</a>
 		            			<ul class="dropdown-menu">
@@ -85,36 +84,36 @@
 		            			<a href="#">Ubrania</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÄ™skie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Buty</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÄ™skie</a></li>
 		            			</ul>
 		            		</li>
-		            		<li><a href="#">Bi¿uteria</a></li>
+		            		<li><a href="#">BiÅ¼uteria</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Zegarki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÄ™skie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Dodatki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÄ™skie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Kosmetyki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÄ™skie</a></li>
 		            			</ul>
 		            		</li>
 		            	</ul>
@@ -124,18 +123,18 @@
 		            	<ul class="dropdown-menu">
 		       				<li><a href="#">Fitness</a></li>
 		           			<li><a href="#">Rowery i akcesoria</a></li>
-		           			<li><a href="#">Sporty dru¿ynowe</a></li>
+		           			<li><a href="#">Sporty druÅ¼ynowe</a></li>
 		           			<li><a href="#">Sporty ekstremalne</a></li>
 		           			<li><a href="#">Sporty zimowe</a></li>
 		           			<li><a href="#">Tennis i pokrewne</a></li>
 		           			<li><a href="#">Turystyka</a></li>
-		           			<li><a href="#">Wêdkarstwo</a></li>
+		           			<li><a href="#">WÄ™dkarstwo</a></li>
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
 		            	<a href="#">Kultura</a>
 		            	<ul class="dropdown-menu">
-		       				<li><a href="#">Ksi¹zki</a></li>
+		       				<li><a href="#">KsiÄ…Å¼ki</a></li>
 		           			<li><a href="#">Komiksy</a></li>
 		           			<li><a href="#">Muzyka</a></li>
 		           			<li><a href="#">Instrumenty</a></li>
@@ -148,19 +147,19 @@
 		       				<li class="dropdown-submenu">
 		       					<a href="#">Ubranka dla dzieci</a>
 		       					<ul class="dropdown-menu">
-		       						<li><a href="#">Dla ch³opców</a></li>
+		       						<li><a href="#">Dla chÅ‚opcÃ³w</a></li>
 		       						<li><a href="#">Dla dziewczynek</a></li>
 		       					</ul>
 		       				</li>
 		           			<li class="dropdown-submenu">
 		           				<a href="#">Buciki</a>
 		           				<ul class="dropdown-menu">
-		       						<li><a href="#">Dla ch³opców</a></li>
+		       						<li><a href="#">Dla chÅ‚opcÃ³w</a></li>
 		       						<li><a href="#">Dla dziewczynek</a></li>
 		       					</ul>
 		       				</li>
 		           			<li><a href="#">Zabawki</a></li>
-		           			<li><a href="#">Wózki dzieciêce</a></li>
+		           			<li><a href="#">WÃ³zki dzieciÄ™ce</a></li>
 		            	</ul>
 		            </li>
 		            <li class="divider"></li>
@@ -175,8 +174,8 @@
 		        <button type="submit" class="btn btn-default">Szukaj</button>
 		      </form>
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="auctions/SingUp.jsp">Rejestracja</a></li>
-		        <li><a href="auctions/LogIn.jsp">Logowanie</a></li>
+		        <li><a href="SignUp.jsp">Rejestracja</a></li>
+		        <li><a href="Login.jsp">Logowanie</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -194,9 +193,9 @@
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Do³¹cz do nas.</h1>
-              <p>Tylko zarejestrowani u¿ytkownicy mog¹ korzystaæ w pe³ni z naszego serwisu. Nie czekaj, wiêc i za³ó¿ darmowe konto.</p>
-              <p><a class="btn btn-lg btn-primary" href="auctions/SingUp.jsp" role="button">Sign up today</a></p>
+              <h1>DoÅ‚Ä…cz do nas.</h1>
+              <p>Tylko zarejestrowani uÅ¼ytkownicy mogÄ… korzystaÄ‡ w peÅ‚ni z naszego serwisu. Nie czekaj, wiÄ™c i zaÅ‚Ã³Å¼ darmowe konto.</p>
+              <p><a class="btn btn-lg btn-primary" href="auctions/SingUp.jsp" role="button">DoÅ‚Ä…cz do nas!</a></p>
             </div>
           </div>
         </div>
@@ -241,11 +240,11 @@
 	              <li><a href="#">Akcja 2</a></li>
 	              <li class="divider"></li>
 	              <li class="dropdown-submenu">
-	                <a tabindex="-1" href="#">Wiêcej opcji</a>
+	                <a tabindex="-1" href="#">WiÃªcej opcji</a>
 	                <ul class="dropdown-menu">
 	                  <li><a tabindex="-1" href="#">2 lvl</a></li>
 	                  <li class="dropdown-submenu">
-	                    <a href="#">Wiêcej</a>
+	                    <a href="#">WiÃªcej</a>
 	                    <ul class="dropdown-menu">
 	                        <li><a href="#">3 lvl</a></li>
 	                    	<li><a href="#">3 lvl</a></li>

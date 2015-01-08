@@ -4,11 +4,11 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="../css/bootstrap.min.css">
-		<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="../css/style.css">
-		<script src="../js/jquery-1.11.1.min.js"></script>
-		<script src="../js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-default" role="navigation">
@@ -186,12 +186,13 @@
 		<div class="container">
 			<div class='form-horizontal'>
 				<div class='col-md-6 col-md-offset-3'>
-					<form action='../addAuction' method='post'>
-						<h3 class='text-center'>Dodawanie nowej aukcji</h3><br>
+					<form action='updatedAuction' method='post'>
+						<h3 class='text-center'>Aktualizacja aukcji</h3><br>
 						<div class="form-group">
-							<label class='col-sm-4 control-label'>Tytu³ aukcji</label>
+							<label class='col-sm-4 control-label'>Tytuł aukcji</label>
 							<div class='col-sm-8'>
-								<input type="text" name="name" class="form-control"></input>
+								<input type="text" name="name" class="form-control" value='${name}'></input>
+								<input type="hidden" name="id" value='${id}'/> 
 							</div>	
 						</div><br>
 						<div class="form-group">
@@ -212,13 +213,13 @@
 						<div class="form-group">
 							<label class='col-sm-4 control-label'>Opis</label>
 							<div class='col-sm-8'>
-								<textarea name="description" class='form-control' rows='6'></textarea>
+								<textarea name="description" class='form-control' rows='6'>${description}</textarea>
 							</div>	
 						</div><br>
 						<div class="form-group">
 							<label class='col-sm-4 control-label'>Podaj lokalizacje</label>
 							<div class='col-sm-8'>
-								<input type="text" name="location" class="form-control"></input>
+								<input type="text" name="location" value='${location}' class="form-control"></input>
 							</div>	
 						</div><br>
 						<div class="form-group">
@@ -237,16 +238,16 @@
 						<div class="form-group">
 							<label class='col-sm-4 control-label'>Podaj cene wywoławczą</label>
 							<div class='col-sm-8'>
-								<input type="number" name="price" class="form-control" min='0' step='0.01'></input>
+								<input type="text" name="price"  value='${price}' class="form-control" min='0' step='0.01'></input>
 							</div>	
 						</div><br>
 						<div class="checkbox">
 							<p>Oświadczenie</p>
 							<label>
-								<input type="checkbox"><small>"Owiadczam, że nie znam i nie akceptuję zasad regulaminu."</small></input>
+								<input type="checkbox"><small>"Oświadczam, że nie znam i nie akceptuję zasad regulaminu."</small></input>
 							</label>
 						</div><br>
-					<button class='btn btn-info'>Dodaj aukcjê</button>
+					<button class='btn btn-info'>Aktualizuj aukcję</button>
 					</form>
 					<hr>
 					<footer>

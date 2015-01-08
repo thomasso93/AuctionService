@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@page language="Java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import ="projekttas.*" %>
+<%@ page import ="java.sql.*" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -40,11 +42,11 @@
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
-		            	<a href="#">Nieruchomoœci</a>
+		            	<a href="#">NieruchomoÂœci</a>
 		            	<ul class="dropdown-menu">
 		            		<li><a href="#">Mieszkania</a></li>
 		            		<li><a href="#">Domy</a></li>
-		            		<li><a href="#">Dzia³ki</a></li>
+		            		<li><a href="#">DziaÂ³ki</a></li>
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
@@ -60,7 +62,7 @@
 		            		<li><a href="#">Komputery</a></li>
 		            		<li><a href="#">Telewizory</a></li>
 		            		<li><a href="#">Konsole</a></li>
-		            		<li><a href="#">Sprzêt DVD/Blu-ray</a></li>
+		            		<li><a href="#">SprzÃªt DVD/Blu-ray</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Fotografia</a>
 		            			<ul class="dropdown-menu">
@@ -68,7 +70,7 @@
 		            				<li><a href="#">Kamery</a></li>
 		            			</ul>
 		            		</li>
-		            		<li><a href="#">Sprzêt audio</a></li>
+		            		<li><a href="#">SprzÃªt audio</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Gry</a>
 		            			<ul class="dropdown-menu">
@@ -85,36 +87,36 @@
 		            			<a href="#">Ubrania</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÃªskie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Buty</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÃªskie</a></li>
 		            			</ul>
 		            		</li>
-		            		<li><a href="#">Bi¿uteria</a></li>
+		            		<li><a href="#">BiÂ¿uteria</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Zegarki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÃªskie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Dodatki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÃªskie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Kosmetyki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÃªskie</a></li>
 		            			</ul>
 		            		</li>
 		            	</ul>
@@ -124,18 +126,18 @@
 		            	<ul class="dropdown-menu">
 		       				<li><a href="#">Fitness</a></li>
 		           			<li><a href="#">Rowery i akcesoria</a></li>
-		           			<li><a href="#">Sporty dru¿ynowe</a></li>
+		           			<li><a href="#">Sporty druÂ¿ynowe</a></li>
 		           			<li><a href="#">Sporty ekstremalne</a></li>
 		           			<li><a href="#">Sporty zimowe</a></li>
 		           			<li><a href="#">Tennis i pokrewne</a></li>
 		           			<li><a href="#">Turystyka</a></li>
-		           			<li><a href="#">Wêdkarstwo</a></li>
+		           			<li><a href="#">WÃªdkarstwo</a></li>
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
 		            	<a href="#">Kultura</a>
 		            	<ul class="dropdown-menu">
-		       				<li><a href="#">Ksi¹zki</a></li>
+		       				<li><a href="#">KsiÂ¹zki</a></li>
 		           			<li><a href="#">Komiksy</a></li>
 		           			<li><a href="#">Muzyka</a></li>
 		           			<li><a href="#">Instrumenty</a></li>
@@ -148,19 +150,19 @@
 		       				<li class="dropdown-submenu">
 		       					<a href="#">Ubranka dla dzieci</a>
 		       					<ul class="dropdown-menu">
-		       						<li><a href="#">Dla ch³opców</a></li>
+		       						<li><a href="#">Dla chÂ³opcÃ³w</a></li>
 		       						<li><a href="#">Dla dziewczynek</a></li>
 		       					</ul>
 		       				</li>
 		           			<li class="dropdown-submenu">
 		           				<a href="#">Buciki</a>
 		           				<ul class="dropdown-menu">
-		       						<li><a href="#">Dla ch³opców</a></li>
+		       						<li><a href="#">Dla chÂ³opcÃ³w</a></li>
 		       						<li><a href="#">Dla dziewczynek</a></li>
 		       					</ul>
 		       				</li>
 		           			<li><a href="#">Zabawki</a></li>
-		           			<li><a href="#">Wózki dzieciêce</a></li>
+		           			<li><a href="#">WÃ³zki dzieciÃªce</a></li>
 		            	</ul>
 		            </li>
 		            <li class="divider"></li>
@@ -175,8 +177,8 @@
 		        <button type="submit" class="btn btn-default">Szukaj</button>
 		      </form>
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="SingUp.jsp">Rejestracja</a></li>
-		        <li><a href="LogIn.jsp">Logowanie</a></li>
+		        <li><a href="../SignUp.jsp">Rejestracja</a></li>
+		        <li><a href="../Login.jsp">Logowanie</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -189,17 +191,17 @@
 	            </a>
 	    		<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
 	              <li class="dropdown-submenu">
-	              	<a tabindex="-1" href="#">Czas do zakoñczenia aukcji</a>
+	              	<a tabindex="-1" href="#">Czas do zakoÅ„czenia aukcji</a>
 	              	<ul class="dropdown-menu">
-	              		<li><a href="#">Krótki</a></li>
-	              		<li><a href="#">D³ugi</a></li>
+	              		<li><a href="#">KrÃ³tki</a></li>
+	              		<li><a href="#">DÅ‚ugi</a></li>
 	              	</ul>
 	              </li>
 	              <li class="dropdown-submenu">
 	              	<a href="#">Aktualna cena</a>
 	              	<ul class="dropdown-menu">
-	              		<li><a href="#">Rosn¹co</a></li>
-	              		<li><a href="#">Malej¹co</a></li>
+	              		<li><a href="#">RosnÄ…co</a></li>
+	              		<li><a href="#">MalejÄ…co</a></li>
 	              	</ul>
 	              </li>	
 	              <li class="divider"></li>
@@ -214,11 +216,11 @@
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
-		            	<a href="#">Nieruchomoœci</a>
+		            	<a href="#">NieruchomoÂœci</a>
 		            	<ul class="dropdown-menu">
 		            		<li><a href="#">Mieszkania</a></li>
 		            		<li><a href="#">Domy</a></li>
-		            		<li><a href="#">Dzia³ki</a></li>
+		            		<li><a href="#">DziaÅ‚ki</a></li>
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
@@ -234,7 +236,7 @@
 		            		<li><a href="#">Komputery</a></li>
 		            		<li><a href="#">Telewizory</a></li>
 		            		<li><a href="#">Konsole</a></li>
-		            		<li><a href="#">Sprzêt DVD/Blu-ray</a></li>
+		            		<li><a href="#">SprzÃªt DVD/Blu-ray</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Fotografia</a>
 		            			<ul class="dropdown-menu">
@@ -242,7 +244,7 @@
 		            				<li><a href="#">Kamery</a></li>
 		            			</ul>
 		            		</li>
-		            		<li><a href="#">Sprzêt audio</a></li>
+		            		<li><a href="#">SprzÄ™t audio</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Gry</a>
 		            			<ul class="dropdown-menu">
@@ -259,36 +261,36 @@
 		            			<a href="#">Ubrania</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÃªskie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Buty</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÃªskie</a></li>
 		            			</ul>
 		            		</li>
-		            		<li><a href="#">Bi¿uteria</a></li>
+		            		<li><a href="#">BiÅ¼uteria</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Zegarki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÃªskie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Dodatki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÃªskie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Kosmetyki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÃªskie</a></li>
 		            			</ul>
 		            		</li>
 		            	</ul>
@@ -298,18 +300,18 @@
 		            	<ul class="dropdown-menu">
 		       				<li><a href="#">Fitness</a></li>
 		           			<li><a href="#">Rowery i akcesoria</a></li>
-		           			<li><a href="#">Sporty dru¿ynowe</a></li>
+		           			<li><a href="#">Sporty druÂ¿ynowe</a></li>
 		           			<li><a href="#">Sporty ekstremalne</a></li>
 		           			<li><a href="#">Sporty zimowe</a></li>
 		           			<li><a href="#">Tennis i pokrewne</a></li>
 		           			<li><a href="#">Turystyka</a></li>
-		           			<li><a href="#">Wêdkarstwo</a></li>
+		           			<li><a href="#">WÃªdkarstwo</a></li>
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
 		            	<a href="#">Kultura</a>
 		            	<ul class="dropdown-menu">
-		       				<li><a href="#">Ksi¹zki</a></li>
+		       				<li><a href="#">KsiÂ¹zki</a></li>
 		           			<li><a href="#">Komiksy</a></li>
 		           			<li><a href="#">Muzyka</a></li>
 		           			<li><a href="#">Instrumenty</a></li>
@@ -322,19 +324,19 @@
 		       				<li class="dropdown-submenu">
 		       					<a href="#">Ubranka dla dzieci</a>
 		       					<ul class="dropdown-menu">
-		       						<li><a href="#">Dla ch³opców</a></li>
+		       						<li><a href="#">Dla chÂ³opcÃ³w</a></li>
 		       						<li><a href="#">Dla dziewczynek</a></li>
 		       					</ul>
 		       				</li>
 		           			<li class="dropdown-submenu">
 		           				<a href="#">Buciki</a>
 		           				<ul class="dropdown-menu">
-		       						<li><a href="#">Dla ch³opców</a></li>
+		       						<li><a href="#">Dla chÂ³opcÃ³w</a></li>
 		       						<li><a href="#">Dla dziewczynek</a></li>
 		       					</ul>
 		       				</li>
 		           			<li><a href="#">Zabawki</a></li>
-		           			<li><a href="#">Wózki dzieciêce</a></li>
+		           			<li><a href="#">WÃ³zki dzieciÃªce</a></li>
 		            	</ul>
 		            </li>
 		            <li class="divider"></li>
@@ -346,6 +348,9 @@
 	            </ul>
 	        </div>
 	        <div id="a">
+	        
+	        tutaj
+
 	        </div>
 			<div class="col-md-9 col-md-offset-4">
 				<nav>

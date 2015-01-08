@@ -14,6 +14,8 @@ public class AuctionDB {
 	private final static String queryUpdateBegin = "UPDATE Auctions SET ";
     private final static String queryWhereId = "WHERE id =";
 
+    private final static int INCREASE_ID_BY_ONE = 1;
+    
     private static Connection connection;
        
     public static ResultSet result;
@@ -70,30 +72,6 @@ public class AuctionDB {
         }
     	return resultString;
     }
-    /*
-    public static void addAuction(Connection conn, String name, String category, String description, String location, String duration, String price){
-
-        String query = "";
-    	String idString = "";
-    	int idInteger;
-    	try{
-            Statement stm = getStatement(conn);
-    		result = stm.executeQuery(querySelectFrom + " Auctions");
-    		
-            while(result.next()){
-    			idString = result.getString("id");
-    		}
-    		
-            idInteger = Integer.parseInt(idString) + 1;
-    		idString = Integer.toString(idInteger);
-    		
-    		query = queryInsertBegin + idString + ", '"+ name + "', '" + category + "', '" + description + "', '" + location + "', '" + duration + "', '" + price + queryInsertEnd;
-    		stm.executeUpdate(query);
-    	}
-    	catch(SQLException e){
-    		throw new RuntimeException(e);
-    	}
-    }*/
     
     public static void addAuction(Connection conn, AuctionDAO auction){
 
@@ -108,7 +86,7 @@ public class AuctionDB {
     			idString = result.getString("id");
     		}
     		
-            idInteger = Integer.parseInt(idString) + 1;
+            idInteger = Integer.parseInt(idString) + INCREASE_ID_BY_ONE;
     		idString = Integer.toString(idInteger);
     		query = queryInsertBegin + idString + ", '"+ auction.name + "', '" + auction.category + "', '" + auction.description + "', '" + auction.location + "', '"
     		+ auction.duration + "', '" + auction.price + queryInsertEnd;
@@ -123,7 +101,7 @@ public class AuctionDB {
     public static void updateAuction(Connection conn,  AuctionDAO auction, String id){
     	Statement stm = getStatement(conn);
     	String query = queryUpdateBegin+"name='" + auction.name + "', category='" + auction.category + "', description='" + auction.description +
-				"', location='" + auction.location + "', duration='" + auction.duration + "', price='" + auction.price +"' WHERE id=" + id;
+				"', location='" + auction.location + "', duration='" + auction.duration + "', price='" + auction.price +"' WHERE id= " + id;
     	try{
     		stm.executeUpdate(query);
     	}
@@ -150,9 +128,11 @@ public class AuctionDB {
                 description = result.getString("description");
                 location = result.getString("location");
                 duration = result.getString("duration");
+                //duration = result.getString("duration");
                 price = result.getString("price");
     		}
-    		auction = new AuctionDAO(name, category, description, location, Integer.parseInt(duration), Float.parseFloat(price));
+    		//auction = new AuctionDAO(name, category, description, location, Integer.parseInt(duration), Float.parseFloat(price));
+    		auction = new AuctionDAO(name, category, description, location, duration, price);
     	}
     	catch(SQLException e){
     		throw new RuntimeException(e);

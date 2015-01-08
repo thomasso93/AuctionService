@@ -38,8 +38,16 @@ public class UpdatedServlet extends HttpServlet {
 		if(conn == null){
             out.print("Unable to connect to database ");
         }
+		/*
+		try{
+			duration = Integer.parseInt(duration);
+		}
+		catch(NumberFormatException e){
+			throw new RuntimeException(e);
+		}*/
 		
-		AuctionDAO auctionToUpdate = new AuctionDAO(name, category, description, location, Integer.parseInt(duration), Float.parseFloat(price));
+		//AuctionDAO auctionToUpdate = new AuctionDAO(name, category, description, location, Integer.parseInt(duration), Float.parseFloat(price));
+		AuctionDAO auctionToUpdate = new AuctionDAO(name, category, description, location, duration, price);
 		AuctionDB.updateAuction(conn, auctionToUpdate, id);
 
         out.print(AuctionDB.getAuction(conn) + "</br>");
