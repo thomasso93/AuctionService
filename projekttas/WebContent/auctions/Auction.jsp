@@ -1,6 +1,9 @@
+<%@page import="java.util.ArrayList"%>
 <%@page language="Java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import ="projekttas.*" %>
-<%@ page import ="java.sql.*" %>
+<%@page import ="projekttas.*" %>
+<%@page import ="java.sql.*" %>
+<%@page import ="java.util.*" %>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -23,7 +26,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="..\indeks.html">Serwis Aukcyjny</a>
+		      <a class="navbar-brand" href="..\index.jsp">Serwis Aukcyjny</a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -348,9 +351,47 @@
 	            </ul>
 	        </div>
 	        <div id="a">
+			Ostatnie aukcje:         
+			<%
+				Connection conn = AuctionDB.connect();
+			
+			if(conn == null){
+	            out.println("Unable to connect to database ");
+	        }
+			%>
+			<table> 
+				<tr>
+    				<th>Produkt:</th>
+    				<th>Lokalizacja:</th>
+    				<th>Cena:</th>
+  				</tr>
+				<%
+					ArrayList<String> auctions = AuctionDB.createAuctionsList(conn);
+							Iterator<String> iterator = auctions.iterator();
+							while(iterator.hasNext()){ 
+								String name = iterator.next();
+								String price = iterator.next();
+								String id = iterator.next();
+								String location = iterator.next();
+				%>
+					<tr>
+							<td width="400">
+								<a href=<% out.print(id);%>>
+									<%out.print(name);%>
+								</a>							
+							</td>
+							
+							<td width="200"><% out.print(location);%></td>
+							
+					 		<td><% out.print(price);%></td>
+					 	
+					 </tr>
+				<%
+					}
+				%>
+			</table>
+			
 	        
-	        tutaj
-
 	        </div>
 			<div class="col-md-9 col-md-offset-4">
 				<nav>

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@page language="Java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -175,9 +174,9 @@
 		        <button type="submit" class="btn btn-default">Szukaj</button>
 		      </form>
 		      <ul class="nav navbar-nav navbar-right">
-		      	<li class="active"><a href="dodajaukcje.html">Dodaj aukcje</a></li>
-		        <li><a href="mojeaukcje.html">Moje aukcje</a></li>
-		        <li><a href="mojekonto.html">Moje konto</a></li>
+		      	<li class="active"><a href="AddAuction.jsp">Dodaj aukcje</a></li>
+		        <li><a href="MyAuctions.jsp">Moje aukcje</a></li>
+		        <li><a href="MyAccount.jsp">Moje konto</a></li>
 		        <li><a href="../index.jsp">Wyloguj</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
@@ -189,7 +188,7 @@
 					<form action='../addAuction' method='post'>
 						<h3 class='text-center'>Dodawanie nowej aukcji</h3><br>
 						<div class="form-group">
-							<label class='col-sm-4 control-label'>Tytu³ aukcji</label>
+							<label class='col-sm-4 control-label'>Tytuł aukcji</label>
 							<div class='col-sm-8'>
 								<input type="text" name="name" class="form-control"></input>
 							</div>	
@@ -243,7 +242,7 @@
 						<div class="checkbox">
 							<p>Oświadczenie</p>
 							<label>
-								<input type="checkbox"><small>"Owiadczam, że nie znam i nie akceptuję zasad regulaminu."</small></input>
+								<input type="checkbox"><small>"Oświadczam, że nie znam i nie akceptuję zasad regulaminu."</small></input>
 							</label>
 						</div><br>
 					<button class='btn btn-info'>Dodaj aukcjê</button>

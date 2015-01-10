@@ -27,7 +27,7 @@ public class AddAuctionServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
+		/*PrintWriter out = response.getWriter();
 		out.println("Auction Servis -> Projekt TAS 2014/15 </br></br>");
 		out.println("Looking for new auctions. Found: </br>");
 		Connection conn = AuctionDB.connect();
@@ -45,7 +45,7 @@ public class AddAuctionServlet extends HttpServlet {
             out.print("An error occurred when closing the database connection " + e);
         }
         out.println("Connection closed successfully");
-		
+		*/
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -64,7 +64,8 @@ public class AddAuctionServlet extends HttpServlet {
  
         AuctionDB.addAuction(conn, auction);
 
-        out.print(AuctionDB.getAuction(conn) + "</br>");
+        //out.print(AuctionDB.getAuction(conn) + "</br>");
+        response.sendRedirect("auctions/Auction.jsp");
         try{
             conn.close();
         }

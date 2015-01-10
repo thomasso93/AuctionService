@@ -1,14 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@page language="Java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="../css/bootstrap.min.css">
-		<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="../css/style.css">
-		<script src="../js/jquery-1.11.1.min.js"></script>
-		<script src="../js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-default" role="navigation">
@@ -21,14 +20,14 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="..\index.jsp">Serwis Aukcyjny</a>
+		      <a class="navbar-brand" href="/index.jsp">Serwis Aukcyjny</a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li><a href="..\index.jsp">Home</a></li>
-		        <li><a href="Auction.jsp">Aukcje</a></li>
+		        <li><a href="index.jsp">Home</a></li>
+		        <li><a href="auctions\Auction.jsp">Aukcje</a></li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategorie <span class="caret"></span></a>
 		          <ul class="dropdown-menu" role="menu">
@@ -40,11 +39,11 @@
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
-		            	<a href="#">Nieruchomo渃i</a>
+		            	<a href="#">Nieruchomo艣聹ci</a>
 		            	<ul class="dropdown-menu">
 		            		<li><a href="#">Mieszkania</a></li>
 		            		<li><a href="#">Domy</a></li>
-		            		<li><a href="#">Dzia砶i</a></li>
+		            		<li><a href="#">Dzia艂ki</a></li>
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
@@ -60,7 +59,7 @@
 		            		<li><a href="#">Komputery</a></li>
 		            		<li><a href="#">Telewizory</a></li>
 		            		<li><a href="#">Konsole</a></li>
-		            		<li><a href="#">Sprz阾 DVD/Blu-ray</a></li>
+		            		<li><a href="#">Sprz臋t DVD/Blu-ray</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Fotografia</a>
 		            			<ul class="dropdown-menu">
@@ -68,7 +67,7 @@
 		            				<li><a href="#">Kamery</a></li>
 		            			</ul>
 		            		</li>
-		            		<li><a href="#">Sprz阾 audio</a></li>
+		            		<li><a href="#">Sprz臋t audio</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Gry</a>
 		            			<ul class="dropdown-menu">
@@ -85,36 +84,36 @@
 		            			<a href="#">Ubrania</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">M阺kie</a></li>
+		            				<li><a href="#">M臋skie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Buty</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">M阺kie</a></li>
+		            				<li><a href="#">M臋skie</a></li>
 		            			</ul>
 		            		</li>
-		            		<li><a href="#">Bi縰teria</a></li>
+		            		<li><a href="#">Bi偶uteria</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Zegarki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">M阺kie</a></li>
+		            				<li><a href="#">M臋skie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Dodatki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">M阺kie</a></li>
+		            				<li><a href="#">M臋skie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Kosmetyki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">M阺kie</a></li>
+		            				<li><a href="#">M臋skie</a></li>
 		            			</ul>
 		            		</li>
 		            	</ul>
@@ -124,18 +123,18 @@
 		            	<ul class="dropdown-menu">
 		       				<li><a href="#">Fitness</a></li>
 		           			<li><a href="#">Rowery i akcesoria</a></li>
-		           			<li><a href="#">Sporty dru縴nowe</a></li>
+		           			<li><a href="#">Sporty dru驴ynowe</a></li>
 		           			<li><a href="#">Sporty ekstremalne</a></li>
 		           			<li><a href="#">Sporty zimowe</a></li>
 		           			<li><a href="#">Tennis i pokrewne</a></li>
 		           			<li><a href="#">Turystyka</a></li>
-		           			<li><a href="#">W阣karstwo</a></li>
+		           			<li><a href="#">W臋dkarstwo</a></li>
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
 		            	<a href="#">Kultura</a>
 		            	<ul class="dropdown-menu">
-		       				<li><a href="#">Ksi箊ki</a></li>
+		       				<li><a href="#">Ksi膮偶ki</a></li>
 		           			<li><a href="#">Komiksy</a></li>
 		           			<li><a href="#">Muzyka</a></li>
 		           			<li><a href="#">Instrumenty</a></li>
@@ -148,19 +147,19 @@
 		       				<li class="dropdown-submenu">
 		       					<a href="#">Ubranka dla dzieci</a>
 		       					<ul class="dropdown-menu">
-		       						<li><a href="#">Dla ch硂pc體</a></li>
+		       						<li><a href="#">Dla ch艂opc贸w</a></li>
 		       						<li><a href="#">Dla dziewczynek</a></li>
 		       					</ul>
 		       				</li>
 		           			<li class="dropdown-submenu">
 		           				<a href="#">Buciki</a>
 		           				<ul class="dropdown-menu">
-		       						<li><a href="#">Dla ch硂pc體</a></li>
+		       						<li><a href="#">Dla ch艂opc贸w</a></li>
 		       						<li><a href="#">Dla dziewczynek</a></li>
 		       					</ul>
 		       				</li>
 		           			<li><a href="#">Zabawki</a></li>
-		           			<li><a href="#">W髗ki dzieci阠e</a></li>
+		           			<li><a href="#">W贸zki dzieci臋ce</a></li>
 		            	</ul>
 		            </li>
 		            <li class="divider"></li>
@@ -175,8 +174,8 @@
 		        <button type="submit" class="btn btn-default">Szukaj</button>
 		      </form>
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="SingUp.jsp">Rejestracja</a></li>
-		        <li class="active"><a href="LogIn.jsp">Logowanie</a></li>
+		        <li><a href="SignUp.jsp">Rejestracja</a></li>
+		        <li class="active"><a href="Login.jsp">Logowanie</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -192,20 +191,20 @@
 						</div><br/>
 
 						<div class="input-group">
-						  <span class="input-group-addon">Has硂</span>
+						  <span class="input-group-addon">Has艂o</span>
 						  <input type="password" class="form-control" placeholder="haslo" required>
 						</div>
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" value="remeber-me">Zapami阾aj mnie 
+								<input type="checkbox" value="remeber-me">Zapami臋taj mnie 
 							</label>
 						</div>
 						<button class="btn btn-info" type="submit">zaloguj</button>
 					</form>
 				</div>
 				<div class='col-md-6'>
-					<h3>Nie masz jeszcze konta? Zal罂 je teraz!</h3></br>
-					<a href="SingUp.jsp" class="btn btn-info" role="button">rejestracja</a>
+					<h3>Nie masz jeszcze konta? Za艂贸偶 je teraz!</h3></br>
+					<a href="SignUp.jsp" class="btn btn-info" role="button">Rejestracja</a>
 				</div>
 			</div>
 			<hr>

@@ -3,11 +3,11 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="../css/bootstrap.min.css">
-		<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="../css/style.css">
-		<script src="../js/jquery-1.11.1.min.js"></script>
-		<script src="../js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-default" role="navigation">
@@ -174,40 +174,86 @@
 		        <button type="submit" class="btn btn-default">Szukaj</button>
 		      </form>
 		      <ul class="nav navbar-nav navbar-right">
-		      	<li><a href="AddAuction.jsp">Dodaj aukcje</a></li>
-		        <li class="active"><a href="MyAuction.jsp">Moje aukcje</a></li>
-		        <li><a href="#">Moje konto</a></li>
-		        <li><a href="../index.jsp">Wyloguj</a></li>
+		      	<li class="active"><a href="auctions/AddAuction.jsp">Dodaj aukcje</a></li>
+		        <li><a href="auctions/MyAuction.jsp">Moje aukcje</a></li>
+		        <li><a href="auctions/MyAccount.jsp">Moje konto</a></li>
+		        <li><a href="index.jsp">Wyloguj</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
 		<div class="container">
-			<div class="text-center">
-				<h2><a href="#">Aukcje obserwowane</a></h2>
-			</div>
-			<div class='row'>
-				<div class='col-md-12'>
+			<div class='form-horizontal'>
+				<div class='col-md-6 col-md-offset-3'>
+					<form action='updatedAuction' method='post'>
+						<h3 class='text-center'>Aktualizacja aukcji</h3><br>
+						<div class="form-group">
+							<label class='col-sm-4 control-label'>Tytuł aukcji</label>
+							<div class='col-sm-8'>
+								<input type="text" name="name" class="form-control" value='${name}'></input>
+								<input type="hidden" name="id" value='${id}'/> 
+							</div>	
+						</div><br>
+						<div class="form-group">
+							<label class='col-sm-4 control-label'>Wybierz kategorie</label>
+							<div class='col-sm-8'>
+								<select name="category" class='form-control'>
+									<option>Motoryzacja</option>
+									<option>Nieruchomosci</option>
+									<option>Elektronika</option>
+									<option>Moda</option>
+									<option>Sport</option>
+									<option>Kultura</option>
+									<option>Dla dzieci</option>
+									<option>Inne</option>
+								</select>
+							</div>	
+						</div><br>
+						<div class="form-group">
+							<label class='col-sm-4 control-label'>Opis</label>
+							<div class='col-sm-8'>
+								<textarea name="description" class='form-control' rows='6'>${description}</textarea>
+							</div>	
+						</div><br>
+						<div class="form-group">
+							<label class='col-sm-4 control-label'>Podaj lokalizacje</label>
+							<div class='col-sm-8'>
+								<input type="text" name="location" value='${location}' class="form-control"></input>
+							</div>	
+						</div><br>
+						<div class="form-group">
+							<label class='col-sm-4 control-label'>Wybierz czas trwania aukcji (godziny)</label>
+							<div class='col-sm-8'>
+								<select name="duration" class='form-control'>
+									<option>4</option>
+									<option>6</option>
+									<option>12</option>
+									<option>24</option>
+									<option>48</option>
+									<option>72</option>
+								</select>
+							</div>	
+						</div><br>
+						<div class="form-group">
+							<label class='col-sm-4 control-label'>Podaj cene wywoławczą</label>
+							<div class='col-sm-8'>
+								<input type="text" name="price"  value='${price}' class="form-control" min='0' step='0.01'></input>
+							</div>	
+						</div><br>
+						<div class="checkbox">
+							<p>Oświadczenie</p>
+							<label>
+								<input type="checkbox"><small>"Oświadczam, że nie znam i nie akceptuję zasad regulaminu."</small></input>
+							</label>
+						</div><br>
+					<button class='btn btn-info'>Aktualizuj aukcję</button>
+					</form>
+					<hr>
+					<footer>
+						<p>&copy; TAS 2014</p>
+					</footer>
 				</div>
 			</div>
-			<div class="text-center">
-				<h2><a href="#">Moje aktywne aukcje</a></h2>
-			</div>
-			<div class='row'>
-				<div class='col-md-12'>
-				</div>
-			</div>
-			<div class="text-center">
-				<h2><a href="#">Moje zakończone aukcje</a></h2>
-			</div>
-			<div class='row'>
-				<div class='col-md-12'>
-				</div>
-			</div>
-			<hr>
-			<footer>
-				<p>&copy; TAS 2014</p>
-			</footer>
 		</div>
 	</body>
 </html>

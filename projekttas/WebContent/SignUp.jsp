@@ -1,14 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@page language="Java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="../css/bootstrap.min.css">
-		<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="../css/style.css">
-		<script src="../js/jquery-1.11.1.min.js"></script>
-		<script src="../js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<nav class="navbar navbar-default" role="navigation">
@@ -21,14 +20,14 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="..\index.jsp">Serwis Aukcyjny</a>
+		      <a class="navbar-brand" href="index.jsp">Serwis Aukcyjny</a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li><a href="..\index.jsp">Home</a></li>
-		        <li><a href="Auction.jsp">Aukcje</a></li>
+		        <li><a href="index.jsp">Home</a></li>
+		        <li><a href="auctions\Auction.jsp">Aukcje</a></li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategorie <span class="caret"></span></a>
 		          <ul class="dropdown-menu" role="menu">
@@ -40,11 +39,11 @@
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
-		            	<a href="#">Nieruchomoœci</a>
+		            	<a href="#">NieruchomoÅ›Âœci</a>
 		            	<ul class="dropdown-menu">
 		            		<li><a href="#">Mieszkania</a></li>
 		            		<li><a href="#">Domy</a></li>
-		            		<li><a href="#">Dzia³ki</a></li>
+		            		<li><a href="#">DziaÅ‚ki</a></li>
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
@@ -60,7 +59,7 @@
 		            		<li><a href="#">Komputery</a></li>
 		            		<li><a href="#">Telewizory</a></li>
 		            		<li><a href="#">Konsole</a></li>
-		            		<li><a href="#">Sprzêt DVD/Blu-ray</a></li>
+		            		<li><a href="#">SprzÄ™t DVD/Blu-ray</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Fotografia</a>
 		            			<ul class="dropdown-menu">
@@ -68,7 +67,7 @@
 		            				<li><a href="#">Kamery</a></li>
 		            			</ul>
 		            		</li>
-		            		<li><a href="#">Sprzêt audio</a></li>
+		            		<li><a href="#">SprzÄ™t audio</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Gry</a>
 		            			<ul class="dropdown-menu">
@@ -85,36 +84,36 @@
 		            			<a href="#">Ubrania</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÄ™skie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Buty</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÄ™skie</a></li>
 		            			</ul>
 		            		</li>
-		            		<li><a href="#">Bi¿uteria</a></li>
+		            		<li><a href="#">BiÅ¼uteria</a></li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Zegarki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÄ™skie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Dodatki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÄ™skie</a></li>
 		            			</ul>
 		            		</li>
 		            		<li class="dropdown-submenu">
 		            			<a href="#">Kosmetyki</a>
 		            			<ul class="dropdown-menu">
 		            				<li><a href="#">Damskie</a></li>
-		            				<li><a href="#">Mêskie</a></li>
+		            				<li><a href="#">MÄ™skie</a></li>
 		            			</ul>
 		            		</li>
 		            	</ul>
@@ -124,18 +123,18 @@
 		            	<ul class="dropdown-menu">
 		       				<li><a href="#">Fitness</a></li>
 		           			<li><a href="#">Rowery i akcesoria</a></li>
-		           			<li><a href="#">Sporty dru¿ynowe</a></li>
+		           			<li><a href="#">Sporty druÂ¿ynowe</a></li>
 		           			<li><a href="#">Sporty ekstremalne</a></li>
 		           			<li><a href="#">Sporty zimowe</a></li>
 		           			<li><a href="#">Tennis i pokrewne</a></li>
 		           			<li><a href="#">Turystyka</a></li>
-		           			<li><a href="#">Wêdkarstwo</a></li>
+		           			<li><a href="#">WÄ™dkarstwo</a></li>
 		            	</ul>
 		            </li>
 		            <li class="dropdown-submenu">
 		            	<a href="#">Kultura</a>
 		            	<ul class="dropdown-menu">
-		       				<li><a href="#">Ksi¹zki</a></li>
+		       				<li><a href="#">KsiÄ…Å¼ki</a></li>
 		           			<li><a href="#">Komiksy</a></li>
 		           			<li><a href="#">Muzyka</a></li>
 		           			<li><a href="#">Instrumenty</a></li>
@@ -148,19 +147,19 @@
 		       				<li class="dropdown-submenu">
 		       					<a href="#">Ubranka dla dzieci</a>
 		       					<ul class="dropdown-menu">
-		       						<li><a href="#">Dla ch³opców</a></li>
+		       						<li><a href="#">Dla chÅ‚opcÃ³w</a></li>
 		       						<li><a href="#">Dla dziewczynek</a></li>
 		       					</ul>
 		       				</li>
 		           			<li class="dropdown-submenu">
 		           				<a href="#">Buciki</a>
 		           				<ul class="dropdown-menu">
-		       						<li><a href="#">Dla ch³opców</a></li>
+		       						<li><a href="#">Dla chÅ‚opcÃ³w</a></li>
 		       						<li><a href="#">Dla dziewczynek</a></li>
 		       					</ul>
 		       				</li>
 		           			<li><a href="#">Zabawki</a></li>
-		           			<li><a href="#">Wózki dzieciêce</a></li>
+		           			<li><a href="#">WÃ³zki dzieciÄ™ce</a></li>
 		            	</ul>
 		            </li>
 		            <li class="divider"></li>
@@ -176,7 +175,7 @@
 		      </form>
 		      <ul class="nav navbar-nav navbar-right">
 		        <li class="active"><a href="SignUp.jsp">Rejestracja</a></li>
-		        <li><a href="LogIn.jsp">Logowanie</a></li>
+		        <li><a href="Login.jsp">Logowanie</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -188,7 +187,7 @@
 						<form action='url_do_logowania' method='post'>
 							<h3 class='text-center'>Rejestracja nowego konta</h3><br>
 							<div class="form-group">
-								<label class='col-sm-4 control-label'>Imiê</label>
+								<label class='col-sm-4 control-label'>ImiÄ™</label>
 								<div class='col-sm-8'>
 									<input type="text" class="form-control"></input>
 								</div>	
@@ -206,7 +205,7 @@
 								</div>	
 							</div><br>
 							<div class="form-group">
-								<label class='col-sm-4 control-label'>Has³o<sup>*</sup></label>
+								<label class='col-sm-4 control-label'>HasÅ‚o<sup>*</sup></label>
 								<div class='col-sm-8'>
 									<input type="password" class="form-control"></input>
 								</div>	
@@ -224,13 +223,13 @@
 								</div>	
 							</div><br>
 							<div class="checkbox">
-								<p>Oœwiadczenie</p>
+								<p>OÂœÅ›wiadczenie<sup>*</sup></p>
 								<label>
-									<input type="checkbox"><small>"Oœwiadczam, ¿e nie znam i nie akceptujê zasad regulaminu."<small></input>
+									<input type="checkbox"><small>"OÂœÅ›wiadczam, Å¼e nie znam i nie akceptujÄ™ zasad regulaminu."<small></input>
 								</label>
 							</div></br>
 							<div class='col-md-6 col-md-offset-11'>
-								<button class='btn btn-success'>za³ó¿ konto</button>
+								<button class='btn btn-success'>zaÅ‚Ã³Å¼ konto</button>
 							</div>
 						</form>
 					</div>

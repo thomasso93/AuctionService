@@ -174,40 +174,35 @@
 		        <button type="submit" class="btn btn-default">Szukaj</button>
 		      </form>
 		      <ul class="nav navbar-nav navbar-right">
-		      	<li><a href="AddAuction.jsp">Dodaj aukcje</a></li>
-		        <li class="active"><a href="MyAuction.jsp">Moje aukcje</a></li>
-		        <li><a href="#">Moje konto</a></li>
+		      	<li class="active"><a href="AddAuction.jsp">Dodaj aukcje</a></li>
+		        <li><a href="MyAuctions.jsp">Moje aukcje</a></li>
+		        <li><a href="MyAccount.jsp">Moje konto</a></li>
 		        <li><a href="../index.jsp">Wyloguj</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
 		<div class="container">
-			<div class="text-center">
-				<h2><a href="#">Aukcje obserwowane</a></h2>
-			</div>
-			<div class='row'>
-				<div class='col-md-12'>
+			<div class='form-horizontal'>
+				<div class='col-md-6 col-md-offset-3'>
+					<form action='../updateAuction' method='post'>
+						<h3 class='text-center'>Aktualizacja aukcji</h3><br>
+						<div class="form-group">
+							<label class='col-xs-6 col-md-2 control-label'>Podaj id aukcji</label>
+							<div class='col-sm-8'>
+								<input type="text" name="id" class="form-control"></input>
+							</div>	
+						</div><br>
+						<div class="col-md-6 col-md-offset-4">
+					<button class='btn btn-info'>Aktualizuj aukcję</button>
+					</div>
+					</form>
+					<hr>
+					<footer>
+						<p>&copy; TAS 2014</p>
+					</footer>
 				</div>
 			</div>
-			<div class="text-center">
-				<h2><a href="#">Moje aktywne aukcje</a></h2>
-			</div>
-			<div class='row'>
-				<div class='col-md-12'>
-				</div>
-			</div>
-			<div class="text-center">
-				<h2><a href="#">Moje zakończone aukcje</a></h2>
-			</div>
-			<div class='row'>
-				<div class='col-md-12'>
-				</div>
-			</div>
-			<hr>
-			<footer>
-				<p>&copy; TAS 2014</p>
-			</footer>
 		</div>
 	</body>
 </html>
