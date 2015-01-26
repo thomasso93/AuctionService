@@ -14,6 +14,7 @@ public class AuctionDB {
 	private final static String QUERY_INSERT_END = "')";
 	private final static String QUERY_UPDATE_BEGIN = "UPDATE Auctions SET ";
     private final static String QUERY_WHERE_ID = "WHERE id =";
+    private final static String QUERY_WHERE_IS_NOT_DELETED = " WHERE deleted = 0";
 
     private final static int INCREASE_ID_BY_ONE = 1;
     
@@ -54,7 +55,7 @@ public class AuctionDB {
         ArrayList<String> auctionsString = new ArrayList<>();
     	try {
             Statement stm = getStatement(conn);
-            result = stm.executeQuery(QUERY_SELECT_ALL_FROM + "Auctions");
+            result = stm.executeQuery(QUERY_SELECT_ALL_FROM + "Auctions" + QUERY_WHERE_IS_NOT_DELETED);
             
             while(result.next()){
                 String name = result.getString("name");
@@ -101,7 +102,7 @@ public class AuctionDB {
     public static void updateAuction(Connection conn,  AuctionDAO auction, String id){
     	Statement stm = getStatement(conn);
     	String query = QUERY_UPDATE_BEGIN+"name='" + auction.name + "', category='" + auction.category + "', description='" + auction.description +
-				"', location='" + auction.location + "', duration='" + auction.duration + "', price='" + auction.price +"' WHERE id= " + id;
+				"', location='" + auction.location + "', duration='" + auction.duration + "', price='" + auction.price + "', deleted=" + auction.deleted +" WHERE id= " + id;
     	try{
     		stm.executeUpdate(query);
     	}
@@ -118,6 +119,7 @@ public class AuctionDB {
         String location = "";
         String duration = "";
         String price = "";
+        boolean deleted = false;
         AuctionDAO auction = null;
     	
         try{
@@ -129,8 +131,9 @@ public class AuctionDB {
                 location = result.getString("location");
                 duration = result.getString("duration");
                 price = result.getString("price");
+                deleted = result.getBoolean("deleted");
     		}
-    		auction = new AuctionDAO(name, category, description, location, duration, price);
+    		auction = new AuctionDAO(name, category, description, location, duration, price, deleted);
     	}
     	catch(SQLException e){
     		throw new RuntimeException(e);

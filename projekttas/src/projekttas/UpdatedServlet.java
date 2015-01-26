@@ -21,6 +21,7 @@ public class UpdatedServlet extends HttpServlet {
 	private String duration = "";
 	private String price = "";
 	private String id = "";
+	private boolean deleted;
 
 	public UpdatedServlet() {
         super();
@@ -39,7 +40,7 @@ public class UpdatedServlet extends HttpServlet {
             out.print("Unable to connect to database ");
         }
 		
-		AuctionDAO auctionToUpdate = new AuctionDAO(name, category, description, location, duration, price);
+		AuctionDAO auctionToUpdate = new AuctionDAO(name, category, description, location, duration, price, deleted);
 		AuctionDB.updateAuction(conn, auctionToUpdate, id);
 
 		response.sendRedirect("auctions/Auction.jsp");
@@ -62,6 +63,7 @@ public class UpdatedServlet extends HttpServlet {
 		duration = request.getParameter("duration");
 		price = request.getParameter("price");
 		id = request.getParameter("id");
+		deleted = Boolean.parseBoolean(request.getParameter("deleted"));
 	}
 	
 }

@@ -34,6 +34,7 @@
 		      <ul class="nav navbar-nav">
 		        <li><a href="..\index.jsp">Home</a></li>
 		        <li class='active'><a href="Auction.jsp">Aukcje</a></li>
+		        <li><a href="UpdateAuction.jsp">Aktualizuj</a></li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategorie <span class="caret"></span></a>
 		          <ul class="dropdown-menu" role="menu">
@@ -375,7 +376,7 @@
 								String location = iterator.next();
 				%>
 					<tr>
-							<td width="400">
+							<td width="400" style="padding-bottom: 10px">
 								<a href=<% out.print(id);%>>
 									<%out.print(name);%>
 								</a>							

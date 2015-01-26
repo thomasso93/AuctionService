@@ -185,67 +185,17 @@
 		<div class="container">
 			<div class='form-horizontal'>
 				<div class='col-md-6 col-md-offset-3'>
-					<form action='../addAuction' method='post'>
-						<h3 class='text-center'>Dodawanie nowej aukcji</h3><br>
+					<form action='../deleteAuction' method='post'>
+						<h3 class='text-center'>Usuwanie aukcji</h3><br>
 						<div class="form-group">
-							<label class='col-sm-4 control-label'>Tytuł aukcji</label>
+							<label class='col-xs-6 col-md-2 control-label'>Podaj id aukcji</label>
 							<div class='col-sm-8'>
-								<input type="text" name="name" class="form-control"></input>
+								<input type="text" name="id" class="form-control"></input>
 							</div>	
 						</div><br>
-						<div class="form-group">
-							<label class='col-sm-4 control-label'>Wybierz kategorie</label>
-							<div class='col-sm-8'>
-								<select name="category" class='form-control'>
-									<option>Motoryzacja</option>
-									<option>Nieruchomosci</option>
-									<option>Elektronika</option>
-									<option>Moda</option>
-									<option>Sport</option>
-									<option>Kultura</option>
-									<option>Dla dzieci</option>
-									<option>Inne</option>
-								</select>
-							</div>	
-						</div><br>
-						<div class="form-group">
-							<label class='col-sm-4 control-label'>Opis</label>
-							<div class='col-sm-8'>
-								<textarea name="description" class='form-control' rows='6'></textarea>
-							</div>	
-						</div><br>
-						<div class="form-group">
-							<label class='col-sm-4 control-label'>Podaj lokalizacje</label>
-							<div class='col-sm-8'>
-								<input type="text" name="location" class="form-control"></input>
-							</div>	
-						</div><br>
-						<div class="form-group">
-							<label class='col-sm-4 control-label'>Wybierz czas trwania aukcji (godziny)</label>
-							<div class='col-sm-8'>
-								<select name="duration" class='form-control'>
-									<option>4</option>
-									<option>6</option>
-									<option>12</option>
-									<option>24</option>
-									<option>48</option>
-									<option>72</option>
-								</select>
-							</div>	
-						</div><br>
-						<div class="form-group">
-							<label class='col-sm-4 control-label'>Podaj cene wywoławczą</label>
-							<div class='col-sm-8'>
-								<input type="number" name="price" class="form-control" min='0' step='0.01'></input>
-							</div>	
-						</div><br>
-						<div class="checkbox">
-							<p>Oświadczenie</p>
-							<label>
-								<input type="checkbox"><small>"Oświadczam, że nie znam i nie akceptuję zasad regulaminu."</small></input>
-							</label>
-						</div><br>
-					<button class='btn btn-info'>Dodaj aukcjê</button>
+						<div class="col-md-6 col-md-offset-4">
+					<button class='btn btn-info'>Usuń aukcję</button>
+					</div>
 					</form>
 					<hr>
 					<footer>

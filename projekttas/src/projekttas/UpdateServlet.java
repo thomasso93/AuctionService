@@ -45,6 +45,7 @@ public class UpdateServlet extends HttpServlet {
 		request.setAttribute("name", auction.name);
 		request.setAttribute("price", auction.price);
 		request.setAttribute("id", id);
+		request.setAttribute("deleted", auction.deleted);
 		request.getRequestDispatcher("auctions/updatingAuction.jsp").forward(request, response);
 		
         try{

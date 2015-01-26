@@ -237,9 +237,18 @@
 						<div class="form-group">
 							<label class='col-sm-4 control-label'>Podaj cene wywoławczą</label>
 							<div class='col-sm-8'>
-								<input type="text" name="price"  value='${price}' class="form-control" min='0' step='0.01'></input>
+								<input type="text" name="price"  value='${price}'></input>
 							</div>	
 						</div><br>
+						<div class="form-group">
+							<label class='col-sm-4 control-label'>Usunąć?</label>
+							<div class='col-sm-8'>
+								<select name="deleted" class='form-control'>
+									<option>FALSE</option>
+									<option>TRUE</option>
+								</select>
+							</div>	
+						</div>
 						<div class="checkbox">
 							<p>Oświadczenie</p>
 							<label>
